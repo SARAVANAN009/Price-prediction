@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <title>
+            Home
+        </title>
+        <style>
+            table{
+                border: 1px solid black;
+            }
+            th,td{
+                padding: 10px;
+            }
+            th{
+                text-align: "right";
+            }
+            .center{
+                position: absolute;
+                top:50%;
+                left:50%;
+                transform: translate(-50%,-50%);
+            }
+        </style>
+    </head>
+    <body>
+           <form action="product" autocomplete="off" method="POST">
+            <div class="row">	
+                Logged in : <strong>{{session.name}} 
+            </div>
+            <table class="center">
+                <tr colspan="2">
+                    <th colspan="2">
+                        <center><h3>Price</h3></center><hr>
+                    </th>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                       <center><p> {{ prediction }} </p></center>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <center><a href="{{ url_for('logout') }}"> Logout</a></center>
+                        
+                    </td>
+                </tr>
+            </table>
+
+           </form>      
+    </body>
+</html>

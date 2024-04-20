@@ -1,0 +1,99 @@
+<html>
+    <head>
+        <title>
+            Home
+        </title>
+        <style>
+            table{
+                border: 1px solid black;
+            }
+            th,td{
+                padding: 10px;
+            }
+            th{
+                text-align: "right";
+            }
+            .center{
+                position: absolute;
+                top:50%;
+                left:50%;
+                transform: translate(-50%,-50%);
+            }
+        </style>
+    </head>
+    <body>
+           <form action="{{ url_for('predict')}}" autocomplete="on" method="POST">
+            <h1>Welcome</h1>
+            <table class="center">
+                <tr colspan="2">
+                    <th colspan="2">
+                        <center><h3> Used CarPrice Prediction</h3></center><hr>
+                    </th>
+                </tr>
+                <tr>
+                    <th>Model Name</th>
+                    <label> <td><input type="text" name="model" required="required" ></td></label>
+                </tr>
+                <tr>
+                    <th>Registration city</th>
+                    <label><td><input type="text" name="registration" required="required"></td></label>
+                </tr>
+                <tr>
+                    <th>Year of Registration</th>
+                    <label> <td><input type="text" name="year"  required="required"></td></label>
+                </tr>
+                <tr>
+                    <th>Present Price</th>
+                    <label> <td><input type="text" name="price"  required="required"></td></label>
+                </tr>
+                <tr>
+                    <th>Km Driven</th>
+                    <label><td><input type="text" name="km" required="required"></td></label>
+                </tr>
+                <tr>
+                    <th>No.of.Owner</th>
+                    <label><td><input type="text" name="owner" required="required"></td></label> 
+                </tr>
+                <tr>
+                    <th>Modification Cost</th>
+                    <label><td><input type="text" name="modification" required="required"></td></label> 
+                </tr>
+                <tr>
+                    <th>Tyre Condition</th>
+                    <label><td><input type="text" name="tyre" required="required"></td></label> 
+                </tr>
+                <tr>
+                    <th>Fuel Type</th>
+                    <label><td><select name="fuel" id="fuel"  required="required">
+                        <option value="Petrol">Pertol</option>
+                        <option value="Diesel">Diesel</option>
+                        <option value="CNG">CNG</option>
+                        <option value="LPG">LPG</option>
+                        <option value="Battery">Battery</option>
+                      </select></td></label>
+                </tr>
+                <tr>
+                    <th>Seller Type</th>
+                    <label><td><select name="seller" id="seller"  required="required">
+                        <option value="Dealer">Dealer</option>
+                        <option value="Individual">Individual</option>
+                      </select></td></label>
+                </tr>
+                <tr>
+                    <th>Transmission</th>
+                    <label><td><select name="transmission" id="transmission"  required="required">
+                        <option value="Manual">Manual</option>
+                        <option value="Automatic">Automatic</option>
+                      </select></td></label>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                       <center><input type="submit" value="submit"></center>
+                    </td>
+                </tr>
+            </table>
+            
+           </form>  
+       
+    </body>
+</html>
